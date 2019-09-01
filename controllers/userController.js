@@ -12,8 +12,7 @@ const validateInput = require('../libs/paramsValidationLib')
 const check = require('../libs/checkLib')
 const passwordLib = require('./../libs/generatePasswordLib');
 const token = require('../libs/tokenLib')
-const nodemailer=require('nodemailer');
-const xoauth2=require('xoauth2');
+
 
 /* Models */
 // start user signup function 
@@ -100,8 +99,6 @@ let signUpFunction = (req, res) => {
     .catch((err)=>{
         console.log(err);
         res.send(err);
-
-
     })
 }// end user signup function 
 
@@ -300,6 +297,5 @@ module.exports = {
 
     signUpFunction: signUpFunction,
     loginFunction: loginFunction,
-    logout: logout,
-    sendingmails:sendingmails
+    logout: logout
 }// end exports

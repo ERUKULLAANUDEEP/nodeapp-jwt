@@ -11,7 +11,6 @@ let setRouter = (app) => {
     let baseUrl = `${appConfig.apiVersion}`;
     app.use(cors())
     //to get all lists that contain tasks
-    app.post(baseUrl+'/forgotpassword',userController.sendingmails);
     app.get(baseUrl+'/lists/all/:userId/:authToken',mid1.isAuthorized,controllers.getalllists);
     //to view the tasks for particular list
     app.get(baseUrl+'/lists/view/:listId/:authToken',mid1.isAuthorized,controllers.viewBylistId);
