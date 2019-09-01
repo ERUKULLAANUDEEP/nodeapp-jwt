@@ -1,7 +1,7 @@
 
 const mongoose=require("mongoose");
 const express=require("express")
-const appConfig =require("./config/appconfig")
+const appConfig =require("./config/appConfig")
 const fs=require("fs");
 const cookieParser=require('cookie-parser')
 const bodyParser=require('body-parser')
